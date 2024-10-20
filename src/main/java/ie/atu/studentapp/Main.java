@@ -11,13 +11,17 @@ public class Main {
 
         String input = myscan.nextLine();
 
-        int myNum = Integer.parseInt(input);
+        try {
+            int myNum = Integer.parseInt(input);
 
-        if(myNum >= 0 && myNum <= 9){
-            System.out.println("You entered: " + myNum);
+            if (myNum >= 0 && myNum <= 9) {
+                System.out.println("You entered: " + myNum);
+            } else {
+                System.out.println("Not a valid number");
+            }
         }
-        else{
-            System.out.println("Not a valid number");
+        catch(NumberFormatException e){
+            System.out.println("Invalid input. Enter number between 0-9 : ");
         }
     }
 }
