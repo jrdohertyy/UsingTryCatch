@@ -21,7 +21,11 @@ public class Main {
             }
         }
         catch(NumberFormatException e){
-            System.out.println("Invalid input. Enter number between 0-9 : ");
+            System.out.println("Invalid input. Enter number between 0-9: " );
+            String input1 = myscan.nextLine();
+        }
+        finally{
+            myscan.close();
         }
     }
 }
